@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\BasicWeatherApp.exe.config
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\BasicWeatherApp.exe
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\BasicWeatherApp.pdb
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.Properties.Resources.resources
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.exe
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.pdb
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWea.DEA60422.Up2Date
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\BasicWeatherApp.exe.manifest
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\BasicWeatherApp.application
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.exe.manifest
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.application
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.Form1.resources
