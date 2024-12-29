@@ -20,5 +20,15 @@ git clone https://github.com/abdimk/CSharpWeatherApp
 ```
 
 
-## Libraries
+### install and run the app
+```bash
+cd Compiledexe
+run the setup.exe
+```
+
+
+
+## Libraries and APIs
+OpenMeteo for Pulling Weather Data [open-meteo](https://open-meteo.com/)
+OpenStreetMap for GeoCoding [openstreetmap](https://www.openstreetmap.org/)
 NewtonSoft for JSON serialization [NewtonSoft.Json](https://www.newtonsoft.com/json)
