@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BasicWeatherApp.exe" version="1.0.0.8" publicKeyToken="fe63f4f949b25de4" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="sunny_sun_cloud_weather_cloudy_icon_194237.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BasicWeatherApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BasicWeatherApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicWeatherApp.exe" size="184792">
+      <assemblyIdentity name="BasicWeatherApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Fjw+4DVuhcfj74pEXwO6w3GNPX/qOGJomO5UCQA9/Xo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4eJ697B+7t9c5xqSVfBCKBam/FhJpIPGcU4bRyBE+p0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BasicWeatherApp.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="sunny_sun_cloud_weather_cloudy_icon_194237.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u8VOmz5dRMaFtcWRi0ATVNbjSvQkIBphmkQYU+k4M2U=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-0D3AF2C\user" issuerKeyHash="055aa8666d516196e2cfb61fb5b1c6b7ad2f5e5c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>0tUN7b2foAU77Xa2zNPCEKqyKwgruHxpXlZqNh8S4Xc=</DigestValue></Reference></SignedInfo><SignatureValue>0Ho/EkKde/3Glu8l/Icp9NpdWu0pK/tlhjODEI4hJbiJbw8s0wMT0QmcZELhm13KTx73YOtaYoYbI0JRLSz2+Yi1ey8yjpFBXgm6z/9VOTmFfFai6uzDo263azfJXPcvgL3p4mDZHvQahoWZqerpYhmXMaWZExgM7h5XjPgcmGw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1AQSN02+Z2HI/xk4ZgYBAUATBUJhjXOkDX8yP6XdNQkK/oJGT855iighycRU6jviuHyGxvsvr+gRWykjD9u18PXx5IK9X8LIAC9r2Zj7Qz+MJ8WrgfqTqqT18lPtmEcwQbAjqzNoei+2a7obgsnY4X7C+1s4JTbcjtBQVnCl0jk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="77e1121f366a565e697cb82b082bb2aa10c2d3ccb676ed3b05a09fbded0dd5d2" Description="" Url=""><as:assemblyIdentity name="BasicWeatherApp.exe" version="1.0.0.8" publicKeyToken="fe63f4f949b25de4" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-0D3AF2C\user</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>cEjo0U9a86zLlcmsaXYvGsZU9Vn6oVE9s6pGKmTPzsM=</DigestValue></Reference></SignedInfo><SignatureValue>s7euuOiqguZd1/tnG65CC1oPi1MdH8s2py8Hn3wiSkOfu2lS0pLHsz1D1IzbNovuJr7MO+YChaLpCxZAa+1R7/EKWQ6nrVtZ6nlE6G9bHjAnpDV9iyPXm1kLArrCCZvRHiA7pRvoyUqwaHCIDO5TT3nPt7ox7BBL+42l9WcdK6I=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1AQSN02+Z2HI/xk4ZgYBAUATBUJhjXOkDX8yP6XdNQkK/oJGT855iighycRU6jviuHyGxvsvr+gRWykjD9u18PXx5IK9X8LIAC9r2Zj7Qz+MJ8WrgfqTqqT18lPtmEcwQbAjqzNoei+2a7obgsnY4X7C+1s4JTbcjtBQVnCl0jk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQH77KXYWbrIpGJJyT2QnMozANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtADAARAAzAEEARgAyAEMAXAB1AHMAZQByMB4XDTI0MTIyODE2MzgxOFoXDTI1MTIyODIyMzgxOFowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQAwAEQAMwBBAEYAMgBDAFwAdQBzAGUAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA1AQSN02+Z2HI/xk4ZgYBAUATBUJhjXOkDX8yP6XdNQkK/oJGT855iighycRU6jviuHyGxvsvr+gRWykjD9u18PXx5IK9X8LIAC9r2Zj7Qz+MJ8WrgfqTqqT18lPtmEcwQbAjqzNoei+2a7obgsnY4X7C+1s4JTbcjtBQVnCl0jkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBACcuW1M69TN++ZRC/arWL3cweSZcgb1tSoBh5yQs9mVXEempw4ay0+O6dHMl+FUoG30nN7ByY3UgbzSwllCEiIgt9W103aVlOtkwEeW/niWxmThSVInKbGWXZ6nMwrBcBoFwFFwrCiRlgt4VjrLKnXdevQSsTxUN7vWtuaoVq+w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
