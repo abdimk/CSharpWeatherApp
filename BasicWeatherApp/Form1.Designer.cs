@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.hourly_panel = new System.Windows.Forms.Panel();
             this.daily_panel = new System.Windows.Forms.Panel();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.textboxLabel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.current_w_image = new System.Windows.Forms.PictureBox();
             this.current_w_temp = new System.Windows.Forms.Label();
@@ -44,10 +47,12 @@
             this.current_humidity = new System.Windows.Forms.Label();
             this.current_wind_speed = new System.Windows.Forms.Label();
             this.current_panel = new System.Windows.Forms.Panel();
-            this.current_drew_point = new System.Windows.Forms.Label();
-            this.current_rain = new System.Windows.Forms.Label();
-            this.current_snowfall = new System.Windows.Forms.Label();
+            this.placeNameLabel = new System.Windows.Forms.Label();
             this.current_visibility = new System.Windows.Forms.Label();
+            this.current_snowfall = new System.Windows.Forms.Label();
+            this.current_rain = new System.Windows.Forms.Label();
+            this.current_drew_point = new System.Windows.Forms.Label();
+            this.daily_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.current_w_image)).BeginInit();
             this.current_panel.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +60,7 @@
             // hourly_panel
             // 
             this.hourly_panel.AutoScroll = true;
-            this.hourly_panel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.hourly_panel.BackColor = System.Drawing.SystemColors.GrayText;
             this.hourly_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hourly_panel.Location = new System.Drawing.Point(12, 261);
             this.hourly_panel.Name = "hourly_panel";
@@ -65,12 +70,35 @@
             // daily_panel
             // 
             this.daily_panel.AutoScroll = true;
-            this.daily_panel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.daily_panel.BackColor = System.Drawing.SystemColors.GrayText;
             this.daily_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.daily_panel.Controls.Add(this.searchBtn);
+            this.daily_panel.Controls.Add(this.textboxLabel);
+            this.daily_panel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.daily_panel.Location = new System.Drawing.Point(768, 13);
             this.daily_panel.Name = "daily_panel";
             this.daily_panel.Size = new System.Drawing.Size(729, 585);
             this.daily_panel.TabIndex = 2;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.searchBtn.Location = new System.Drawing.Point(378, 12);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 23);
+            this.searchBtn.TabIndex = 1;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // textboxLabel
+            // 
+            this.textboxLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textboxLabel.Location = new System.Drawing.Point(33, 14);
+            this.textboxLabel.Name = "textboxLabel";
+            this.textboxLabel.Size = new System.Drawing.Size(339, 20);
+            this.textboxLabel.TabIndex = 0;
+            this.textboxLabel.TextChanged += new System.EventHandler(this.textboxLabel_TextChanged);
             // 
             // label1
             // 
@@ -124,6 +152,7 @@
             this.current_w_desc.Size = new System.Drawing.Size(117, 24);
             this.current_w_desc.TabIndex = 4;
             this.current_w_desc.Text = "temp-desc";
+            this.current_w_desc.Click += new System.EventHandler(this.current_w_desc_Click);
             // 
             // humidity_label
             // 
@@ -217,6 +246,7 @@
             // 
             this.current_panel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.current_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.current_panel.Controls.Add(this.placeNameLabel);
             this.current_panel.Controls.Add(this.current_visibility);
             this.current_panel.Controls.Add(this.current_snowfall);
             this.current_panel.Controls.Add(this.current_rain);
@@ -239,38 +269,17 @@
             this.current_panel.Size = new System.Drawing.Size(750, 243);
             this.current_panel.TabIndex = 0;
             // 
-            // current_drew_point
+            // placeNameLabel
             // 
-            this.current_drew_point.AutoSize = true;
-            this.current_drew_point.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.current_drew_point.ForeColor = System.Drawing.SystemColors.Control;
-            this.current_drew_point.Location = new System.Drawing.Point(431, 104);
-            this.current_drew_point.Name = "current_drew_point";
-            this.current_drew_point.Size = new System.Drawing.Size(96, 19);
-            this.current_drew_point.TabIndex = 13;
-            this.current_drew_point.Text = "[drewpoint]";
-            // 
-            // current_rain
-            // 
-            this.current_rain.AutoSize = true;
-            this.current_rain.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.current_rain.ForeColor = System.Drawing.SystemColors.Control;
-            this.current_rain.Location = new System.Drawing.Point(431, 164);
-            this.current_rain.Name = "current_rain";
-            this.current_rain.Size = new System.Drawing.Size(48, 19);
-            this.current_rain.TabIndex = 14;
-            this.current_rain.Text = "[rain]";
-            // 
-            // current_snowfall
-            // 
-            this.current_snowfall.AutoSize = true;
-            this.current_snowfall.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.current_snowfall.ForeColor = System.Drawing.SystemColors.Control;
-            this.current_snowfall.Location = new System.Drawing.Point(618, 104);
-            this.current_snowfall.Name = "current_snowfall";
-            this.current_snowfall.Size = new System.Drawing.Size(83, 19);
-            this.current_snowfall.TabIndex = 15;
-            this.current_snowfall.Text = "[snowfall]";
+            this.placeNameLabel.AutoSize = true;
+            this.placeNameLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeNameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.placeNameLabel.Location = new System.Drawing.Point(157, 191);
+            this.placeNameLabel.Name = "placeNameLabel";
+            this.placeNameLabel.Size = new System.Drawing.Size(164, 19);
+            this.placeNameLabel.TabIndex = 17;
+            this.placeNameLabel.Text = "[Unknown Location]";
+            this.placeNameLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // current_visibility
             // 
@@ -283,6 +292,39 @@
             this.current_visibility.TabIndex = 16;
             this.current_visibility.Text = "[visibility]";
             // 
+            // current_snowfall
+            // 
+            this.current_snowfall.AutoSize = true;
+            this.current_snowfall.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current_snowfall.ForeColor = System.Drawing.SystemColors.Control;
+            this.current_snowfall.Location = new System.Drawing.Point(618, 104);
+            this.current_snowfall.Name = "current_snowfall";
+            this.current_snowfall.Size = new System.Drawing.Size(83, 19);
+            this.current_snowfall.TabIndex = 15;
+            this.current_snowfall.Text = "[snowfall]";
+            // 
+            // current_rain
+            // 
+            this.current_rain.AutoSize = true;
+            this.current_rain.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current_rain.ForeColor = System.Drawing.SystemColors.Control;
+            this.current_rain.Location = new System.Drawing.Point(431, 164);
+            this.current_rain.Name = "current_rain";
+            this.current_rain.Size = new System.Drawing.Size(48, 19);
+            this.current_rain.TabIndex = 14;
+            this.current_rain.Text = "[rain]";
+            // 
+            // current_drew_point
+            // 
+            this.current_drew_point.AutoSize = true;
+            this.current_drew_point.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current_drew_point.ForeColor = System.Drawing.SystemColors.Control;
+            this.current_drew_point.Location = new System.Drawing.Point(431, 104);
+            this.current_drew_point.Name = "current_drew_point";
+            this.current_drew_point.Size = new System.Drawing.Size(96, 19);
+            this.current_drew_point.TabIndex = 13;
+            this.current_drew_point.Text = "[drewpoint]";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,9 +333,12 @@
             this.Controls.Add(this.daily_panel);
             this.Controls.Add(this.hourly_panel);
             this.Controls.Add(this.current_panel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Basic Weather App";
+            this.daily_panel.ResumeLayout(false);
+            this.daily_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.current_w_image)).EndInit();
             this.current_panel.ResumeLayout(false);
             this.current_panel.PerformLayout();
@@ -322,6 +367,9 @@
         private System.Windows.Forms.Label current_snowfall;
         private System.Windows.Forms.Label current_rain;
         private System.Windows.Forms.Label current_drew_point;
+        private System.Windows.Forms.TextBox textboxLabel;
+        private System.Windows.Forms.Label placeNameLabel;
+        private System.Windows.Forms.Button searchBtn;
     }
 }
 

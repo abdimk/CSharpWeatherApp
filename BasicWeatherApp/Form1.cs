@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using System.Windows.Threading;
 using System.Windows.Forms;
 using BasicWeatherApp.Models;
 using BasicWeatherApp.Services;
@@ -14,21 +16,32 @@ namespace BasicWeatherApp
 {
     public partial class Form1 : Form
     {
-        private string latitude = "9.005401";
-        private string longitude = "38.763611";
+        private string latitude; // "9.005401";
+        private string longitude; // "38.763611";
 
         private string siteUrl = "https://api.open-meteo.com/v1/forecast";
 
         private WeatherDataService _weatherDataService;
+        //private GeoCoding geoCoding;
+
+        //private DispatcherTimer timer;
         public Form1()
         {
             InitializeComponent();
 
             _weatherDataService = new WeatherDataService();
 
-            LoadCurrentWeatherData();
-            LoadHourlyWeatherData();
-            LoadDailyWeatherData();
+            //LoadCurrentWeatherData();
+            //LoadHourlyWeatherData();
+            //LoadDailyWeatherData();
+
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Geocoding api has been added 
+            //geoCoding = new GeoCoding();
+
+          
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -48,6 +61,7 @@ namespace BasicWeatherApp
             CurrentUnits currentUnits = currentWeather.current_units;
             CurrentValues currentValues = currentWeather.current;
 
+            //placeNameLabel.Text = "Addis Abeba, Ethiopia"; 
             current_w_temp.Text = Math.Round(currentValues.temperature_2m) + " " + currentUnits.temperature_2m;
             apparent_temp.Text = "Feels Like " + Math.Round(currentValues.temperature_2m) + " " + currentUnits.apparent_temprature;
             current_humidity.Text = Math.Round(currentValues.relative_humidity_2m) + " " + currentUnits.relative_humidity_2m;
@@ -303,7 +317,72 @@ namespace BasicWeatherApp
 
         }
 
+        private void current_w_desc_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxLabel_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+        private async void searchBtn_Click(object sender, EventArgs e)
+        {
+            string input = textboxLabel.Text;
+
+            // Check if the input is not empty
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                MessageBox.Show("Please enter a city and country in the format 'City, Country'.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Split the input into city and country
+            string[] parts = input.Split(new[] { ',' }, 2); // Split only on the first comma
+            if (parts.Length < 2)
+            {
+                MessageBox.Show("Please enter both city and country in the format 'City, Country'.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string city = parts[0].Trim(); // Get the city part and trim any whitespace
+            string country = parts[1].Trim(); // Get the country part and trim any whitespace
+
+            GeoCoding geoCoding = new GeoCoding();
+            placeNameLabel.Text = textboxLabel.Text;
+
+            try
+            {
+                var (latitude, longitude) = await geoCoding.GetCoordinatesAsync(city, country);
+                MessageBox.Show($"Latitude: {latitude}\nLongitude: {longitude}", "Found Coordinates", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InititalizeFunctions(latitude, longitude);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Geocoding Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        private void InititalizeFunctions(double lat, double lonti)
+        {
+            latitude = lat.ToString();
+            longitude = lonti.ToString();
+
+
+            LoadCurrentWeatherData();
+            LoadHourlyWeatherData();
+            LoadDailyWeatherData();
+        }
 
     }
 }

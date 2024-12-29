@@ -15,3 +15,6 @@ C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debu
 C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.exe.manifest
 C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.application
 C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\obj\Debug\BasicWeatherApp.Form1.resources
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\weather_discription.json
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\Services\weather_discription.json
+C:\Users\user\Desktop\Final Csh project\BasicWeatherApp\BasicWeatherApp\bin\Debug\Resources\weather_discription.json
