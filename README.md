@@ -7,7 +7,7 @@
 
 
 <div>
-    <img src="preview/Weather%20AppFinal.png" width="100px" height="100px"></h1> 
+    <img src="preview/Weather%20AppFinal.png" width="300px" height="200px"></h1> 
 </div>
 
 ## About
