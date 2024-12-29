@@ -11,7 +11,7 @@
 </div>
 
 ## About
-<p>This app is built using WinForms in C#. It utilizes the Open-Meteo API for fetching weather data and OpenSourceMap for obtaining geocoordinate locations.you can find the executable file under [this](https://github.com/abdimk/CSharpWeatherApp/tree/main/Compiledexe/setup.exe)</p>
+<p>This app is built using WinForms in C#. It utilizes the Open-Meteo API for fetching weather data and OpenSourceMap for obtaining geocoordinate locations.you can find the executable file under </p>[this](https://github.com/abdimk/CSharpWeatherApp/tree/main/Compiledexe/setup.exe)
 
 
 ### Clone the github repository
@@ -22,5 +22,5 @@ git clone https://github.com/abdimk/CSharpWeatherApp
 
 
 ## Libraries
-<p>NewtonSoft for json serialization [link](https://www.newtonsoft.com/json)</p>
+<p>NewtonSoft for json serialization </p>[link](https://www.newtonsoft.com/json)
 
